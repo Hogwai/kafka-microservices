@@ -34,9 +34,22 @@ curl --location 'http://localhost:8080/order' \
 
 ### Consumer-producer
 This microservice listens to events emitted on the producer topic.
-Its purpose is to apply VAT on food orders, then to emit the order on the consumer topic.
+Its purpose is to apply VAT on food orders, then to emit the updated order on the consumer-producer topic.
 
 ### Consumer
 This microservice listens to events emitted on the consumer-producer topic.
 Its purpose is to save food orders in database.
 
+
+## Installation
+Clone the project on your local machine.
+
+Launch Zookeeper, Kafka and Kafdrop:
+```
+docker compose up
+```
+
+Launch the microservices:
+```
+mvn spring-boot:run
+```
