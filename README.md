@@ -35,6 +35,7 @@ curl --location 'http://localhost:8080/order' \
 ### Consumer-producer
 This microservice listens to events emitted on the producer topic.
 Its purpose is to apply VAT on food orders, then to emit the updated order on the consumer-producer topic.
+It uses Kafka Streams.
 
 ### Consumer
 This microservice listens to events emitted on the consumer-producer topic.
