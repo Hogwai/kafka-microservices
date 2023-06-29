@@ -19,4 +19,5 @@ public class FoodOrder {
     private Long id;
     private String item;
     private Double amount;
+    private Double vat;
 }

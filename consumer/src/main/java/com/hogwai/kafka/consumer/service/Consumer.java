@@ -14,7 +14,7 @@ import org.modelmapper.ModelMapper;
 @Component
 public class Consumer {
 
-    private static final String ORDER_TOPIC = "${topic.name}";
+    private static final String VAT_TOPIC = "${topic.name}";
 
     private final ObjectMapper objectMapper;
     private final ModelMapper modelMapper;
@@ -27,7 +27,7 @@ public class Consumer {
         this.foodOrderService = foodOrderService;
     }
 
-    @KafkaListener(topics = ORDER_TOPIC)
+    @KafkaListener(topics = VAT_TOPIC)
     public void consumeMessage(String message) throws JsonProcessingException {
         log.info("Message consumed: {}", message);
 

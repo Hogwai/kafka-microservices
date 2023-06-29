@@ -1,10 +1,10 @@
-package com.hogwai.kafka.producer.model;
+package com.hogwai.kafka.consumerproducer.model;
 
 import lombok.Data;
-import lombok.Value;
+import lombok.Setter;
 
 @Data
-@Value
+@Setter
 public class FoodOrder {
     String item;
     Double amount;
